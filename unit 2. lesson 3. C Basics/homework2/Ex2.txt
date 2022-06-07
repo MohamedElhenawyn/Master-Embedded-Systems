@@ -1,0 +1,26 @@
+/*
+ * main.c
+ *	
+ *  	Created on: Mar 16, 2022
+ *      Author: Mohamed_Ahmed
+ *      Ex2:Program  to check Vowel or consonant
+ *
+ */
+
+
+#include <stdio.h>
+int main ()
+{
+	char alpha;
+	printf("Enter an alphabet: ");
+	fflush(stdout);
+	scanf("%c",&alpha);
+	if(alpha =='a' ||alpha =='e'||alpha =='i'||alpha =='o'||alpha =='u'  )
+	{
+		printf("%c is vowel.",alpha);
+	}else
+	{
+		printf("%c is consonant.",alpha);
+	}
+	return 0;
+}
