@@ -1,0 +1,21 @@
+#include <stdio.h>
+int calcPow(int base,int pow);
+int main(void)
+{
+    int base,pow,retVal;
+    printf("Enter base number: ");
+    scanf("%d",&base);
+    printf("Enter power number (positive integer): ");
+    scanf("%d",&pow);
+    retVal = calcPow(base,pow);
+    printf("%d^%d = %d",base,pow,retVal);
+    return 0;
+}
+
+int calcPow(int base,int pow)
+{
+    if(pow != 0)
+        return base * calcPow(base,pow - 1);
+    else
+        return 1;
+}
