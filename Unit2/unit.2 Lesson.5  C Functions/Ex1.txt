@@ -1,0 +1,56 @@
+// C program to get prime numbers between two intervals
+#include <stdio.h>
+
+int PrimeNumbers(int ,int ,int arr[]);
+int main (void)
+{
+    //! showMemory (start = 65520)
+    int i ,num1,num2,numOfElem = 0;
+    printf("Enter two numbers(intervals): ");
+    scanf("%d %d",&num1,&num2);
+    if(num2 > num1)
+    {
+        int arr[num2 - num1];
+        numOfElem = PrimeNumbers(num1,num2,arr);
+        printf("\nPrime numbers between %d and %d are: ",num1,num2);
+        for (i = 0; i <numOfElem;i++)
+        {
+            printf("%d ",arr[i]);
+        }
+    }
+    else
+    {
+        printf("You entered a wrong intervals! \n-> the small is first\n");
+    }
+    
+    return 0;
+}
+int PrimeNumbers(int min,int max,int arr[])
+{
+    int i = min ,index = 0,counter = 0;
+    for(i ; i <= max ; i++)
+    {
+        if(i > 10)
+        {    
+            if(i % 2 == 0 || i % 3 == 0 || i % 4 == 0 || i % 5 == 0 || i % 6 == 0 || i % 7 == 0 || i % 8 == 0 || i % 9 == 0)
+            {
+                continue;
+            }
+            else
+            {
+                arr[index] = i;
+                index++;
+                counter++;
+            }
+        }else
+        {
+            if(i == 2 || i == 3 || i == 5 || i == 7)
+            {
+                arr[index] = i;
+                index++;
+                counter++;
+            }
+        }
+    }
+    return counter;
+}

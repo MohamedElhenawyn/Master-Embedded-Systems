@@ -1,0 +1,28 @@
+/*
+ * main.c
+ *
+ *  Created on: Mar 16, 2022
+ *      Author: Mohamed_Ahmed
+ *      Ex5:program to check whether a character is an alphabet or not
+ *
+ */
+
+
+#include <stdio.h>
+int main ()
+{
+	char alpha;
+	printf("Enter an alphabet: ");
+	fflush(stdout);
+	scanf("%c",&alpha);
+	if((alpha >= 'a' && alpha <= 'z') || (alpha >='A'&& alpha <= 'Z')  )
+	{
+
+		printf("%c is an alphabet.",alpha);
+	}
+	else
+	{
+		printf("%c is not an alphabet.",alpha);
+	}
+	return 0;
+}

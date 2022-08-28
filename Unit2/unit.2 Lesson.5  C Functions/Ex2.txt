@@ -1,0 +1,25 @@
+// C program to calculate factorial of a number using recursion
+#include <stdio.h>
+
+int factorial(int);
+
+int main(void)
+{
+    int num;
+    printf("Enter a positive number: ");
+    scanf("%d",&num);
+    printf("Factorial of %d = %d ",num,factorial(num));
+    return 0;
+}
+int factorial (int fact)
+{
+    int sum = 0;
+    if(fact == 1)
+    {
+        return 1;
+    }else
+    {
+        sum = fact* factorial(fact - 1);
+    }
+    return sum;
+}

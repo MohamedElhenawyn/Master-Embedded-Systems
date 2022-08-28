@@ -1,0 +1,36 @@
+/*
+ * main.c
+ *
+ *  	Created on: Mar 16, 2022
+ *      Author: Mohamed_Ahmed
+ *      Ex7: program to find factorial of a number
+ *
+ */
+
+
+#include <stdio.h>
+int main ()
+{
+	int x,sum,i;
+	sum = 1;
+	printf("Enter an integer: ");
+	fflush(stdout);
+	scanf("%d",&x);
+	if(x > 0)
+	{
+
+		for(i = 1;i <= x;i++)
+		{
+			sum *=i;
+		}
+		printf("Factorial = %d",sum);
+
+	}else if (x == 0)
+	{
+		printf("Factorial = 1 ");
+	}else
+	{
+		printf("Error!!! Factorial of negative numbers doesn't exist.");
+	}
+	return 0;
+}

@@ -1,0 +1,18 @@
+/*
+ * main.c
+ *
+ *  Created on: Mar 16, 2022
+ *      Author: Mohamed_Ahmed
+ */
+
+
+#include <stdio.h>
+int main ()
+{
+	char x;
+	printf("Enter a character: ");
+	fflush(stdout);
+	scanf("%c",&x);
+	printf("ASCII value of %c = %d\n",x,x);
+	return 0;
+}
