@@ -1365,10 +1365,10 @@
 
 
 <Modeling type="Avatar Requirement" nameTab="Requirements" >
-<AvatarRDPanel name="AVATAR RD" minX="10" maxX="2500" minY="10" maxY="1500" zoom="1.0" >
+<AvatarRDPanel name="AVATAR RD" minX="10" maxX="2000" minY="10" maxY="1200" zoom="0.8" >
 <COMPONENT type="5200" id="441" >
-<cdparam x="56" y="840" />
-<sizeparam width="200" height="120" minWidth="1" minHeight="30" maxWidth="2000" maxHeight="2000" minDesiredWidth="196" minDesiredHeight="0" />
+<cdparam x="44" y="672" />
+<sizeparam width="160" height="96" minWidth="0" minHeight="19" maxWidth="1600" maxHeight="1600" minDesiredWidth="196" minDesiredHeight="0" />
 <hidden value="false" />
 <cdrectangleparam minX="10" maxX="2500" minY="10" maxY="1500" />
 <infoparam name="Requirement" value="Read_from_UltraSonicsSensor" />
@@ -1431,8 +1431,8 @@
 </COMPONENT>
 
 <COMPONENT type="5200" id="485" >
-<cdparam x="62" y="623" />
-<sizeparam width="297" height="135" minWidth="1" minHeight="30" maxWidth="2000" maxHeight="2000" minDesiredWidth="128" minDesiredHeight="0" />
+<cdparam x="49" y="498" />
+<sizeparam width="237" height="108" minWidth="0" minHeight="19" maxWidth="1600" maxHeight="1600" minDesiredWidth="128" minDesiredHeight="0" />
 <hidden value="false" />
 <cdrectangleparam minX="10" maxX="2500" minY="10" maxY="1500" />
 <infoparam name="Requirement" value="DistanceThreshold" />
@@ -1496,8 +1496,8 @@
 </COMPONENT>
 
 <COMPONENT type="5200" id="529" >
-<cdparam x="461" y="399" />
-<sizeparam width="294" height="145" minWidth="1" minHeight="30" maxWidth="2000" maxHeight="2000" minDesiredWidth="86" minDesiredHeight="0" />
+<cdparam x="368" y="319" />
+<sizeparam width="235" height="116" minWidth="0" minHeight="19" maxWidth="1600" maxHeight="1600" minDesiredWidth="86" minDesiredHeight="0" />
 <hidden value="false" />
 <cdrectangleparam minX="10" maxX="2500" minY="10" maxY="1500" />
 <infoparam name="Requirement" value="MotorActing" />
@@ -1560,8 +1560,8 @@
 </COMPONENT>
 
 <COMPONENT type="5200" id="573" >
-<cdparam x="145" y="395" />
-<sizeparam width="200" height="120" minWidth="1" minHeight="30" maxWidth="2000" maxHeight="2000" minDesiredWidth="122" minDesiredHeight="0" />
+<cdparam x="116" y="316" />
+<sizeparam width="160" height="96" minWidth="0" minHeight="19" maxWidth="1600" maxHeight="1600" minDesiredWidth="122" minDesiredHeight="0" />
 <hidden value="false" />
 <cdrectangleparam minX="10" maxX="2500" minY="10" maxY="1500" />
 <infoparam name="Requirement" value="distanceDetection" />
@@ -1624,8 +1624,8 @@
 </COMPONENT>
 
 <COMPONENT type="5200" id="617" >
-<cdparam x="272" y="139" />
-<sizeparam width="274" height="179" minWidth="1" minHeight="30" maxWidth="2000" maxHeight="2000" minDesiredWidth="135" minDesiredHeight="0" />
+<cdparam x="217" y="111" />
+<sizeparam width="219" height="143" minWidth="0" minHeight="19" maxWidth="1600" maxHeight="1600" minDesiredWidth="135" minDesiredHeight="0" />
 <hidden value="false" />
 <cdrectangleparam minX="10" maxX="2500" minY="10" maxY="1500" />
 <infoparam name="Requirement" value="Collision_Avoidance" />
@@ -1688,39 +1688,39 @@
 </COMPONENT>
 
 <CONNECTOR type="5202" id="619" >
-<cdparam x="156" y="840" />
-<sizeparam width="0" height="0" minWidth="0" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
+<cdparam x="124" y="672" />
+<sizeparam width="0" height="0" minWidth="0" minHeight="0" maxWidth="1600" maxHeight="1600" minDesiredWidth="0" minDesiredHeight="0" />
 <infoparam name="connector" value="&lt;&lt;deriveReqt&gt;&gt;" />
 <TGConnectingPoint num="0" id="618" />
-<P1  x="156" y="840" id="405" />
-<P2  x="210" y="758" id="452" />
+<P1  x="124" y="672" id="405" />
+<P2  x="167" y="606" id="452" />
 <AutomaticDrawing  data="true" />
 </CONNECTOR>
 <CONNECTOR type="5206" id="621" >
-<cdparam x="210" y="623" />
-<sizeparam width="0" height="0" minWidth="0" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
+<cdparam x="168" y="498" />
+<sizeparam width="0" height="0" minWidth="0" minHeight="0" maxWidth="1600" maxHeight="1600" minDesiredWidth="0" minDesiredHeight="0" />
 <infoparam name="connector" value="&lt;&lt;refine&gt;&gt;" />
 <TGConnectingPoint num="0" id="620" />
-<P1  x="210" y="623" id="449" />
-<P2  x="245" y="515" id="540" />
+<P1  x="167" y="498" id="449" />
+<P2  x="196" y="412" id="540" />
 <AutomaticDrawing  data="true" />
 </CONNECTOR>
 <CONNECTOR type="5205" id="623" >
-<cdparam x="698" y="387" />
-<sizeparam width="0" height="0" minWidth="0" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
+<cdparam x="558" y="309" />
+<sizeparam width="0" height="0" minWidth="0" minHeight="0" maxWidth="1600" maxHeight="1600" minDesiredWidth="0" minDesiredHeight="0" />
 <infoparam name="connector" value="&lt;&lt;composition&gt;&gt;" />
 <TGConnectingPoint num="0" id="622" />
-<P1  x="608" y="399" id="493" />
-<P2  x="477" y="318" id="585" />
+<P1  x="485" y="319" id="493" />
+<P2  x="381" y="254" id="585" />
 <AutomaticDrawing  data="true" />
 </CONNECTOR>
 <CONNECTOR type="5205" id="625" >
-<cdparam x="245" y="395" />
-<sizeparam width="0" height="0" minWidth="0" minHeight="0" maxWidth="2000" maxHeight="2000" minDesiredWidth="0" minDesiredHeight="0" />
+<cdparam x="196" y="316" />
+<sizeparam width="0" height="0" minWidth="0" minHeight="0" maxWidth="1600" maxHeight="1600" minDesiredWidth="0" minDesiredHeight="0" />
 <infoparam name="connector" value="&lt;&lt;composition&gt;&gt;" />
 <TGConnectingPoint num="0" id="624" />
-<P1  x="245" y="395" id="537" />
-<P2  x="340" y="318" id="583" />
+<P1  x="196" y="316" id="537" />
+<P2  x="271" y="254" id="583" />
 <AutomaticDrawing  data="true" />
 </CONNECTOR>
 
