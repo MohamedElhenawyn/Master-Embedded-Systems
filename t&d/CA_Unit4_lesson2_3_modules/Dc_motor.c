@@ -21,7 +21,7 @@ void DC_motor(int s)
 STATE_define(DC_idle)
 {
     //state name 
-    Dc_motor_state = DC_idle;
+    DC_state_id = DC_idle;
     //state action
     //DC_Motor(speed)
     //call pwm to make speed equals = dc_speed 
@@ -35,7 +35,7 @@ STATE_define(DC_idle)
 STATE_define(DC_busy)
 {
     //state name
-    Dc_motor_state = DC_busy; 
+    DC_state_id = DC_busy; 
     //state action
     //DC_Motor(speed)
     //call pwm to make speed equals = dc_speed to change the speed

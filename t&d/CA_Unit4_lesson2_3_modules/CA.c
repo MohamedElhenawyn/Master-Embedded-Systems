@@ -5,7 +5,7 @@ int CA_distance = 0;
 int CA_thershold = 50;
 
 //state pointer to function
-int Us_Get_distance_random(int l ,int r ,int count);
+//int Us_Get_distance_random(int l ,int r ,int count);
 void (* CA_state)();
 
 
