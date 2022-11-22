@@ -14,18 +14,28 @@ void send_OnAlarm(bool x)
     printf("Recieve on alarm from the controller\n");
     fflush(stdout);
     alarmOn = x;
+    STATE(AlarmHandler)();
 }
 void send_OffAlarm(bool x)
 {
     printf("No alarm recieved from the controller\n");
     fflush(stdout);
     alarmOff = x;
+    STATE(AlarmHandler)();
 }
 STATE_define(AlarmHandler)
 {
     AH_state_id = AlarmHandler;
-    (alarmOn == true)?(AH_state = STATE(AlarmOn)):(AH_state = STATE(AlarmHandler));
-    (alarmOff == true)?(AH_state = STATE(AlarmOff)):(AH_state = STATE(AlarmHandler));
+    printf("AlarmHandler state\n");
+    if(alarmOn == true)
+    {
+        AH_state = STATE(AlarmOn);
+    }
+
+    if(alarmOff == true)
+    {
+        AH_state = STATE(AlarmOff);
+    }
 }
 STATE_define(AlarmOn)
 {
