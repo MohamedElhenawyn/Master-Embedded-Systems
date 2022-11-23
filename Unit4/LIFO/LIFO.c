@@ -1,85 +1,44 @@
 #include "LIFO.h"
-LIFO_status LIFO_init(LIFO_Buf_t * lifo,element_type * buf , uint32_t length)
-{
-    if(buf != NULL)
-    {
-        lifo->base = buf;
-        lifo->head = buf;
-        lifo->length = length;
-        lifo->count = 0;
-        return LIFO_no_error;
-    }else{
-        return LIFO_null;
-    }
-}
-LIFO_status LIFO_push(LIFO_Buf_t * lifo ,element_type item)
-{
-    //check if the buf is exist
-    if(lifo->base)
-    {
-        //check the buf is not full
-        if(lifo->count <= lifo->length)
-        {
-            *(lifo->head) = item;
-            lifo->head++;
-            lifo->count++;
-            return LIFO_no_error;
-        }
-        else
-        {
-            return LIFO_full;
-        }
-        //push the item to the buf 
-    }
-    else
-    {
-        return LIFO_null;
-    }
-        
-}
-LIFO_status LIFO_pop(LIFO_Buf_t * lifo,element_type * item)
-{
-    if(lifo->base)
-    {
-        //check if the buf is empty
-        if(lifo->count == 0)
-        {
-            return LIFO_empty;
-        }else{
-            lifo->head--;
-            *item = *(lifo->head);
-            
-            lifo->count--;
-            return LIFO_no_error;
-        }
-    }
-    else
-    {   
-        return LIFO_null;
-    }
-}
-void LIFO_print(LIFO_Buf_t * lifo)
-{
 
-    if(lifo->head)
+LIFO_Bufferstatus LIFO_init(LIFO_buff_t * lBuf,LIFO_elementType * buff,uint32_t length)
+{
+    if(buff == NULL)
     {
-        if(lifo->count == 0)
-        {
-            printf("LIFO is empty\n");
-        }
-        else
-        {
-            element_type * tmp = (lifo->head);
-            tmp--;
-            for (int i =0; i < lifo->count ;i++)
-            {
-                printf("%d element of the lifo is %d\n", i + 1, *(tmp));
-                tmp--;
-            }
-        }
+        return LIFO_Null;
     }
-    else
+    lBuf->base = buff;
+    lBuf->head = buff;
+    lBuf->length = length;
+    lBuf->count = 0;
+    return LIFO_no_error;
+}
+LIFO_Bufferstatus LIFo_Push_item(LIFO_buff_t * lBuf ,LIFO_elementType pushItem)
+{
+    if(!lBuf->head || !lBuf->base)
     {
-        printf("LIFO NULL\n");
+        return LIFO_Null;
     }
+    if(lBuf->count == lBuf->length)
+    {
+        return LIFO_full;
+    }
+    *(lBuf->head) = pushItem ;
+    lBuf->head++;
+    lBuf->count++;
+    return LIFO_no_error;
+}
+LIFO_Bufferstatus LIFO_Pop_item(LIFO_buff_t * lBuf,LIFO_elementType *Popitem)
+{
+    if(!lBuf->head || !lBuf->base)
+    {
+        return LIFO_Null;
+    }
+    if(lBuf->head == lBuf->base)
+    {
+        return LIFO_empty;
+    }
+    lBuf->head--;
+    lBuf->count--;
+    *(Popitem) = *(lBuf->head);
+    return LIFO_no_error;
 }

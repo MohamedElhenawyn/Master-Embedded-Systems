@@ -2,26 +2,26 @@
 #define LIFO_H_
 #include <stdint.h>
 #include <stdio.h>
-#define element_type uint32_t
-
-typedef struct{
-    uint32_t length;
-    uint32_t count;
-    element_type * base;
-    element_type * head;
-}LIFO_Buf_t;
-
-typedef enum
+#include <stdlib.h>
+#define LIFO_elementType uint32_t //define here the elemnt types of the lifo
+typedef struct
 {
-    LIFO_no_error,
-    LIFO_null,
-    LIFO_full,
-    LIFO_empty
-}LIFO_status;
+    uint32_t length;
+    LIFO_elementType * base;
+    LIFO_elementType * head;
+    uint32_t count;
+}LIFO_buff_t;
 
-LIFO_status LIFO_init(LIFO_Buf_t * lifo,element_type * buf , uint32_t length);
-LIFO_status LIFO_push(LIFO_Buf_t * lifo ,element_type item);
-LIFO_status LIFO_pop(LIFO_Buf_t * lifo,element_type * item);
-void LIFO_print(LIFO_Buf_t * lifo);
+typedef enum {
+    LIFO_no_error,
+    LIFO_full,
+    LIFO_not_Full,
+    LIFO_empty,
+    LIFO_Not_empty,
+    LIFO_Null
+}LIFO_Bufferstatus;
+LIFO_Bufferstatus LIFO_init(LIFO_buff_t * lBuf,LIFO_elementType * buff,uint32_t length);
+LIFO_Bufferstatus LIFo_Push_item(LIFO_buff_t * lBuf ,LIFO_elementType pushItem);
+LIFO_Bufferstatus LIFO_Pop_item(LIFO_buff_t * lBuf,LIFO_elementType *Popitem);
 
 #endif
