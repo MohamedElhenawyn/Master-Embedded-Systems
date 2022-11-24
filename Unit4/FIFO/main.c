@@ -19,13 +19,24 @@ int main(void)
         }
     }
     puts("");
-    for(uint32_t i = 0; i <size;i++)
+    
+    if((FIFO_pop(&pUartBuff,&temp))==FIFO_no_error)
     {
-        if((FIFO_pop(&pUartBuff,&temp))==FIFO_no_error)
-        {
-            printf("pop %d from the fifo\n",i);
-        }
+            printf("pop %d from the fifo\n",temp);
+    }
+    if((FIFO_pop(&pUartBuff,&temp))==FIFO_no_error)
+    {
+            printf("pop %d from the fifo\n",temp);
     }
 
+    print_FIFO(&pUartBuff);
+
+    if((FIFO_pop(&pUartBuff,&temp))==FIFO_no_error)
+    {
+            printf("pop %d from the fifo\n",temp);
+    }
+    print_FIFO(&pUartBuff);
+    
+    
     return 0;
 }

@@ -24,5 +24,5 @@ typedef enum{
 FIFO_status FIFO_init(FIFO_buff_t * lBuf,element_type * buff,uint32_t length);
 FIFO_status FIFO_push(FIFO_buff_t * lBuf,element_type item);
 FIFO_status FIFO_pop(FIFO_buff_t * lBuf , element_type * item);
-
+FIFO_status print_FIFO(FIFO_buff_t *lBuf);
 #endif

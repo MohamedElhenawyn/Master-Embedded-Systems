@@ -59,5 +59,32 @@ FIFO_status FIFO_pop(FIFO_buff_t * lBuf , element_type * item)
         lBuf->tail++;
     }
     return FIFO_no_error;
+}
 
+FIFO_status print_FIFO(FIFO_buff_t * lBuf)
+{
+    element_type * temp ;
+    temp = lBuf->tail;
+    if(!lBuf->base)
+    {
+        return FIFO_null;
+    }
+    if(lBuf->count == 0)
+    {
+        return FIFO_empty;
+    }
+    printf("The Buffer has %d elemnts.\n",lBuf->count);
+    for(uint32_t i = 0; i < lBuf->count;i++)
+    {
+        if(temp == (lBuf->base + (sizeof(element_type)*lBuf->length)))
+        {
+            printf("%d- element is %d\n",i + 1,*temp);
+            temp = lBuf->base;
+        }else
+        {
+            printf("%d- element is %d\n",i + 1,*temp);
+            temp++;
+        }
+    } 
+    return FIFO_no_error;        
 }
