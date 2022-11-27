@@ -34,6 +34,7 @@ void fill_the_record(struct sStudent * ptr)
     printf("\nEnter student height: ");
     gets(temp_text);
     ptr->Student.height = atof(temp_text);
+    printf("Done adding\n");
     
 }
 int Delete_Student()
@@ -101,4 +102,24 @@ void deleteAll()
         free(prev);
     }
     gpFirstStudent = NULL;
+}
+
+int GetNth(int index)
+{
+    struct sStudent * temp = gpFirstStudent;
+    int i = 0;
+    while (temp != NULL)
+    {
+        if(i == index)
+        {
+            printf("The ID at index %d is %d\n",i,temp->Student.ID);
+            printf("The Name at index %d is %s\n",i,temp->Student.name);
+            printf("The height at index %d is %.2f\n",i,temp->Student.height);
+
+            return 1;//Found
+        }
+        i++;
+        temp = temp->pNextStudent;
+    }
+    return 0; //not found
 }

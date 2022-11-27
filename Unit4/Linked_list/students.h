@@ -19,4 +19,5 @@ void fill_the_record(struct sStudent *);
 void print_students();
 int Delete_Student();
 void deleteAll();
+int GetNth(int );
 #endif
