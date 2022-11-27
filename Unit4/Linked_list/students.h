@@ -14,8 +14,9 @@ struct sStudent
     struct sData Student;
     struct sStudent * pNextStudent;
 };
-
-struct sStudent * createNode();
-struct sStudent * append(struct sStudent *last,struct sStudent *next);
-void print_students(struct sStudent *database);
+void AddStudent();
+void fill_the_record(struct sStudent *);
+void print_students();
+int Delete_Student();
+void deleteAll();
 #endif
