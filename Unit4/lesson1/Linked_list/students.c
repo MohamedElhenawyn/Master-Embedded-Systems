@@ -39,7 +39,6 @@ void fill_the_record(struct sStudent * ptr)
 }
 int Delete_Student()
 {
-    
     struct sStudent * temp = gpFirstStudent;
     struct sStudent * prev = temp; 
     int i;
