@@ -10,6 +10,7 @@ void (*ps_handler_state)();
 void ps_handler_init()
 {
     printf("Ps_handler init \n");
+    DPRINTF(3,"\n");
     fflush(stdout);
 }
 STATE_define(ps_busy)
@@ -17,6 +18,7 @@ STATE_define(ps_busy)
     ps_state_id = ps_busy;
     pressureVal = generate_random(15,25,1);
     printf("Pressure sensor busy state ,Pressure = %d\n",pressureVal);
+    DPRINTF(3,"\n");
     fflush(stdout);
     send_pressure(pressureVal);
     ps_handler_state = STATE(ps_busy);

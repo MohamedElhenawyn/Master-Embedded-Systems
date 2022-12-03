@@ -7,8 +7,8 @@
 #define debug
 #define DPRINTF(debug_level,...) if(debug_level > 1)\
                                     printf("@Func: %s ,File: %s ,Line: %d",__func__,__FILE__,__LINE__);\
-                                    prntf(">>\t");\
-                                    printf("__VA_ARGS__")
+                                    printf(">>\t");\
+                                    printf(__VA_ARGS__)
 
 
 #define STATE_define(_state_) void ST_##_state_()
