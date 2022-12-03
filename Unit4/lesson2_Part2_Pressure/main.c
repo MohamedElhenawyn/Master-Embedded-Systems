@@ -10,10 +10,10 @@ void setup()
     controller_state = STATE(Controller_busy);
     AH_state = STATE(AlarmHandler);
 }
-
+void __attribute__((constructor)) setup();
 int main (void)
 {
-    setup();
+    //setup();
     while(1)
     {
         ps_handler_state();
