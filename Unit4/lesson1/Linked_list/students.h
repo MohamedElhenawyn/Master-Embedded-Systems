@@ -20,4 +20,6 @@ void print_students();
 int Delete_Student();
 void deleteAll();
 int GetNth(int );
+int findLength(struct sStudent *);
+int findNthNodeFromEnd(struct sStudent *,int );
 #endif
