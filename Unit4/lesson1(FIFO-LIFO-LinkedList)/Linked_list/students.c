@@ -122,3 +122,40 @@ int GetNth(int index)
     }
     return 0; //not found
 }
+
+int findLength(struct sStudent * ptr)
+{
+    struct sStudent * temp = ptr;
+    if(ptr)
+    {
+
+        return 1 + findLength(temp->pNextStudent);
+    }else{
+        return 0;
+    }
+}
+int findNthNodeFromEnd(struct sStudent *ptr,int nEnd)
+{
+    struct sStudent *main_ptr,*ref_ptr;
+    main_ptr = ptr;
+    ref_ptr = ptr;
+    for(int i = 1;i <= nEnd ;i++)
+    {
+        ref_ptr = ref_ptr->pNextStudent;
+        if(ref_ptr == NULL && i <nEnd)
+        {
+            printf("The linked list is not that big");
+            return 1;//not found
+        }
+    }
+    while(ref_ptr != NULL)
+    {
+        ref_ptr = ref_ptr->pNextStudent;
+        main_ptr = main_ptr->pNextStudent;
+    }
+    printf("The student ID is : %d\n",main_ptr->Student.ID);
+    printf("The student name is : %s\n",main_ptr->Student.name);
+    printf("The student height is : %.2f\n",main_ptr->Student.height);
+    return 0;//found
+
+}
