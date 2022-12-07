@@ -1,10 +1,7 @@
 #include "driver.h"
 #include <stdint.h>
 #include <stdio.h>
-void Delay(int nCount)
-{
-	for(; nCount != 0; nCount--);
-}
+
 
 int getPressureVal(){
 	return (GPIOA_IDR & 0xFF);

@@ -18,7 +18,7 @@
 #define GPIOA_ODR *(volatile uint32_t *)(GPIO_PORTA + 0x0C)
 
 
-void Delay(int nCount);
+
 int getPressureVal();
 void Set_Alarm_actuator(int i);
 void GPIO_INITIALIZATION ();
