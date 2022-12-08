@@ -18,7 +18,7 @@
 #define STATE(_state_) ST_##_state_
 
 void sendPressureVal(int);
-
+void sendAlarmState(bool);
 
 
 #endif
