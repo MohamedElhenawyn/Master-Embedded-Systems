@@ -26,5 +26,5 @@ STATE_define(AlarmActivate)
     Delay(50000);
     Set_Alarm_actuator(0);
     AH_state = STATE(idle);
-
+    
 }
