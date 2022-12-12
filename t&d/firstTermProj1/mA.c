@@ -15,7 +15,7 @@ void sendPressureVal(int ps_pressure_val)
 STATE_define(pressureHandling)
 {
     mA_state_id = pressureHandling;
-    Dprintf(3,"\n");
+    //Dprintf(3,"\n");
     if(pressureVal_A <= pressureThreshold)
     {
         sendAlarmState(false);
@@ -28,7 +28,7 @@ STATE_define(pressureHandling)
 STATE_define(AlarmHandling)
 {
     mA_state_id = AlarmHandling;
-    Dprintf(3,"\n");
+    //Dprintf(3,"\n");
     sendAlarmState(true);
     mA_Handler_state = STATE(pressureHandling);
 }

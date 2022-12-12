@@ -1,6 +1,7 @@
 #ifndef PS_H_
 #define PS_H_
 #include "state.h"
+#include "driver.h"
 enum{
     ps_reading
 }ps_state_id;

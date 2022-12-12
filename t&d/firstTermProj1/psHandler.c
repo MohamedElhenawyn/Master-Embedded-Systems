@@ -17,7 +17,7 @@ STATE_define(ps_reading)
     //pressureVal = getRandom(15,25,1);
     pressureVal = getPressureVal();
     //printf("PressureValue ---- = %d ---->MainAlgorithm\n",pressureVal);
-    fflush(stdout);
+    //fflush(stdout);
     sendPressureVal(pressureVal);
     ps_handler_state = STATE(ps_reading);
 }
