@@ -6,20 +6,23 @@ void (*ps_handler_state)();
 int getRandom(int min ,int max,int count);
 void psHandler_init(void)
 {
-    Dprintf(3,"\n");
+    //Dprintf(3,"\n");
+    GPIO_INITIALIZATION();
 }
 
 STATE_define(ps_reading)
 {
     ps_state_id = ps_reading;
-    Dprintf(3,"\n");
-    pressureVal = getRandom(15,25,1);
-    printf("PressureValue ---- = %d ---->MainAlgorithm\n",pressureVal);
+    //Dprintf(3,"\n");
+    //pressureVal = getRandom(15,25,1);
+    pressureVal = getPressureVal();
+    //printf("PressureValue ---- = %d ---->MainAlgorithm\n",pressureVal);
     fflush(stdout);
     sendPressureVal(pressureVal);
     ps_handler_state = STATE(ps_reading);
 }
 
+/*
 int getRandom(int min,int max,int count)
 {
     int i;
@@ -30,3 +33,4 @@ int getRandom(int min,int max,int count)
         return rand_nunm;
     }
 }
+*/
