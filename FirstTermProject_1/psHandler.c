@@ -19,14 +19,16 @@ STATE_define(ps_reading)
     sendPressureVal(pressureVal);
     ps_handler_state = STATE(ps_reading);
 }
+/*
 
 int getRandom(int min,int max,int count)
 {
     int i;
-    Dprintf(3,"\n");
+    //Dprintf(3,"\n");
     for(i = 0;i < count; i++)
     {
         int rand_nunm = (rand() % (max - min + 1 )) + min ;
         return rand_nunm;
     }
 }
+*/

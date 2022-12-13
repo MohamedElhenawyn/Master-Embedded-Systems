@@ -6,8 +6,9 @@ Name: Mohamed Ahmed Mostafa Elhenawy
 MEMORY
 {
     flash(RX): ORIGIN = 0x08000000 , LENGTH = 128K
-    ram(RWX): ORIGN = 0x20000000,LENGTH = 20K
+    sram(RWX): ORIGIN  =   0x20000000,LENGTH = 20K
 }
+
 SECTIONS
 {
     .text :
