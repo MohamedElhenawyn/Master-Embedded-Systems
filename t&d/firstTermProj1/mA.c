@@ -1,5 +1,5 @@
 #include "mA.h"
-static int pressureVal_A;
+int pressureVal_A;
 int pressureThreshold = 20;
 bool AlarmState;
 

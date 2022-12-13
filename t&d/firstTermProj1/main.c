@@ -5,6 +5,7 @@
 #include "psHandler.h"
 #include "AlarmHandler.h"
 #include "mA.h"
+void Simulate_timer_schedular(void);
 void setup(){
 	psHandler_init();
 	ps_handler_state = STATE(ps_reading);
@@ -16,10 +17,15 @@ int main (){
 	setup();
 	while (1)
 	{
-		//Implement your Design
+		Simulate_timer_schedular();
+	}
+}
+void Simulate_timer_schedular(void)
+{
+	//Implement your Design
 		ps_handler_state();
 		mA_Handler_state();
 		AH_state();
-		Delay(5000);
-	}
+		//Here it simulate the schedular but in a real eos we have to use the timer module
+		Delay(5000); 
 }

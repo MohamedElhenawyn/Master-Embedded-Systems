@@ -25,9 +25,8 @@ STATE_define(AlarmActivate)
     AH_state_id = AlarmActivate;
     //Dprintf(3,"\n");
     Set_Alarm_actuator(0);
-    Delay(50000000);
+    Delay(30090000);
     Set_Alarm_actuator(1);
-    Delay(50000000);
     AH_state = STATE(idle);
 
 }
