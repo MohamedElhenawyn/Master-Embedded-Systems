@@ -10,3 +10,5 @@ https://docs.google.com/spreadsheets/d/1LSeGOSydgPw1NoKj1Aic13-lbsm0CVtfMW2EFCar
 
 ->Exams scores link :
 https://docs.google.com/spreadsheets/d/1KlOq7202uY-iyU87D2YBUAG-lyxz_7VQHL6qJCS3Rug/edit#gid=0
+
+Let's start again as if we had never failed
