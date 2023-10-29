@@ -1,4 +1,4 @@
-# Master-Embedded-Systems(EMAN)
+# Master-Embedded-Systems
 
 ##EDITED
 
