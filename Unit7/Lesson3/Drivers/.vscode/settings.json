@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "stm32_f103c6_gpio_driver.h": "c",
+        "stm32f103x6.h": "c",
+        "stdlib.h": "c",
+        "stdio.h": "c"
+    }
+}
